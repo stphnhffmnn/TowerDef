@@ -17,4 +17,8 @@ public class QuestMapController : MonoBehaviour {
             QuestButtons[i].GetComponent<QuestButtonClass>().isActive = true;
         }
 	}
+    public void MenuMain()
+    {
+        Application.LoadLevel("MainMenu");
+    }
 }
