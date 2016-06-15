@@ -7,36 +7,42 @@ public class PlayerController : MonoBehaviour {
     Collider coll;
     public bool canSpawn;
     Vector3 Point;
+    public bool isPlacingTower;
     // Use this for initialization
     void Start() {
         canSpawn = true;
+        isPlacingTower = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Touch touch = Input.GetTouch(0);
-
-        if(touch.phase == TouchPhase.Began)
+        if (Input.touchCount > 0)
         {
-            TouchTime = Time.time;
-            Point = Camera.main.ScreenToWorldPoint(new Vector3((touch.position.x), (touch.position.y), 10f));
-            transform.position = Point;
-        }
-        if(touch.phase == TouchPhase.Moved)
-        {
-            Point = Camera.main.ScreenToWorldPoint(new Vector3((touch.position.x), (touch.position.y), 10f));
-            transform.position = Point;
-        }
-        if(touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
-        { 
-       
 
-            Destroy(GameObject.FindGameObjectWithTag("Enemy"));
-            Point = Camera.main.ScreenToWorldPoint(new Vector3((touch.position.x), (touch.position.y), 10f));
-            transform.position = Point;
-            if (canSpawn) { Instantiate(Tower, Point, Quaternion.identity); }
+            Touch touch = Input.GetTouch(0);
 
+            if (touch.phase == TouchPhase.Began)
+            {
+                TouchTime = Time.time;
+                Point = Camera.main.ScreenToWorldPoint(new Vector3((touch.position.x), (touch.position.y), 10f));
+                transform.position = Point;
+            }
+            if (touch.phase == TouchPhase.Moved)
+            {
+                Point = Camera.main.ScreenToWorldPoint(new Vector3((touch.position.x), (touch.position.y), 10f));
+                transform.position = Point;
+            }
+            if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
+            {
+
+
+                Destroy(GameObject.FindGameObjectWithTag("Enemy"));
+                Point = Camera.main.ScreenToWorldPoint(new Vector3((touch.position.x), (touch.position.y), 10f));
+                transform.position = Point;
+              
+
+            }
         }
 
     }
