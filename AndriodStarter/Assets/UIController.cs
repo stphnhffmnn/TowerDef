@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class UIController : MonoBehaviour {
-    public int state = 0;
+    public int state = 0; // puased
+    public bool paused;
     public Transform TDMenu;
-    public Transform EcoMenu;
+    public Transform PauseMenu;
     public Vector3 MainPos;
     public Vector3 EnemyPos;
     Camera cam;
@@ -12,9 +13,10 @@ public class UIController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         time = 1;
+        paused = false;
         MainPos = Camera.main.transform.position;
         cam = Camera.main;
-        state = 2;
+        state = 0;
 	}
 	
 	// Update is called once per frame
@@ -28,32 +30,38 @@ public class UIController : MonoBehaviour {
         {
             cam.transform.position = EnemyPos;
         }
-        if(state == 2)//EcoMenu
+        if(paused)
         {
-            EcoMenu.GetComponent<Animator>().Play("EcoMenuAnim");
-            EcoMenu.GetComponent<Animator>().speed = 13;
-            Time.timeScale = 0.2f;
-           
+            PauseMenu.gameObject.SetActive(true);
+            Time.timeScale = 0;
         }
-        if(state != 2)
+        else
         {
-            EcoMenu.GetComponent<Animator>().Play("EcoMenuClose");
-            EcoMenu.GetComponent<Animator>().speed = 2;
-            Time.timeScale = time;
+            PauseMenu.gameObject.SetActive(false);
+            Time.timeScale = 1;
         }
 
 	}
-    public void setState(int num)
+    public void setState()
     {
 
-        if(num == 1 && state == 1)
+        if(state == 1)
         {
             state = 0;
         }
-        else { state = num; }
+        else { state = 1; }
         
 
     }
+    public void setPause()
+    {
+        if(paused)
+        {
+            paused = false;
+        }
+        else { paused = true; }
+    }
+
     public void DoubleSpeed()
     {
         if(time == 2)
@@ -62,4 +70,17 @@ public class UIController : MonoBehaviour {
         }
         else { time =2; }
     }
+    public void restart()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+    }
+    public void quit()
+    {
+        Application.Quit();
+    }
+    public void MainMenu()
+    {
+        Application.LoadLevel("MainMenu");
+    }
+  
 }
