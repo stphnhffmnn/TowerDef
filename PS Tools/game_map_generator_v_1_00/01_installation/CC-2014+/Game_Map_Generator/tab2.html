@@ -1,0 +1,87 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="de">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Elements</title>
+        <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery.modal.min.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/doc.js" type="text/javascript"></script>
+        <script src="js/CSInterface.js"></script>
+        <script src="js/3dmgg_t2.js"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/jquery.modal.css" type="text/css">
+    </head>
+    <body>
+        <div class="wrapper">
+        
+            <div class="navigation inline center">
+                <ul>
+                    <li><a href="index.html">MAP</a></li><li class="active">
+                    <a href="tab2.html">ELEMENTS</a></li><li>
+                    <a href="tab3.html">TEXTURING</a></li><li>
+                    <a href="tab4.html">ICONS</a></li>
+                </ul>
+            </div>
+            
+            <div class="tool--wrap border-bot">
+                <div class="tool--layer-and-brushes clearfix center">
+                    <div class="col">
+                        <span class="label-top" >ADD LAYER</span><br>
+                        <button onClick="process(newEL)">+</button>
+                    </div>
+                    <div class="col">
+                        <span class="label-top">BRUSHES</span><br>
+                        <img onClick="brush('3dmgg_hard_round_pressure', 70)" src="img/001_brushes/btn_brushes_001.png" />
+                        <img onClick="brush('3dmgg_hard_round', 50)" src="img/001_brushes/btn_brushes_002.png" />
+                        <img onClick="brush('3dmgg_soft_edges', 70)" src="img/001_brushes/btn_brushes_003.png" />
+                        <img onClick="brush('3dmgg_hard_edges', 100)" src="img/001_brushes/btn_brushes_004.png" />
+                        <img onClick="brush('3dmgg_round_soft', 70)" src="img/001_brushes/btn_brushes_005.png" />
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tool--wrap center rechts">
+                <span class="headline">CHOOSE AN ELEMENT</span>
+                <ul class="tool--elements inline">
+                    <li onClick="element('element_1')"><img src="img/002_elements/btn_elements_001.png" /></li>
+                    <li onClick="element('element_2')"><img src="img/002_elements/btn_elements_002.png" /></li>
+                    <li onClick="element('element_3')"><img src="img/002_elements/btn_elements_003.png" /></li>
+                    <li onClick="element('element_4')"><img src="img/002_elements/btn_elements_004.png" /></li>
+                    <li onClick="element('element_5')"><img src="img/002_elements/btn_elements_005.png" /></li>
+                    <li onClick="element('element_6')"><img src="img/002_elements/btn_elements_006.png" /></li>
+                    <li onClick="element('element_7')"><img src="img/002_elements/btn_elements_007.png" /></li>
+                    <li onClick="element('element_8')"><img src="img/002_elements/btn_elements_008.png" /></li>
+                    <li onClick="element('element_9')"><img src="img/002_elements/btn_elements_009.png" /></li>
+                    <li onClick="element('element_10')"><img src="img/002_elements/btn_elements_010.png" /></li>
+                    <li onClick="element('element_11')"><img src="img/002_elements/btn_elements_011.png" /></li>
+                    <li onClick="element('element_12')"><img src="img/002_elements/btn_elements_012.png" /></li>
+                    <li onClick="element('element_13')"><img src="img/002_elements/btn_elements_013.png" /></li>
+                    <li onClick="element('element_14')"><img src="img/002_elements/btn_elements_014.png" /></li>
+                    <li onClick="element('element_15')"><img src="img/002_elements/btn_elements_015.png" /></li>
+                    <li onClick="element('element_16')"><img src="img/002_elements/btn_elements_016.png" /></li>
+                    <li onClick="element('element_17')"><img src="img/002_elements/btn_elements_017.png" /></li>
+                    <li onClick="element('element_18')"><img src="img/002_elements/btn_elements_018.png" /></li>
+                    <li onClick="element('element_19')"><img src="img/002_elements/btn_elements_019.png" /></li>
+                    <li onClick="element('element_20')"><img src="img/002_elements/btn_elements_020.png" /></li>
+                    <li onClick="element('element_21')"><img src="img/002_elements/btn_elements_021.png" /></li>
+                    <li onClick="element('element_22')"><img src="img/002_elements/btn_elements_022.png" /></li>
+                    <li onClick="element('element_23')"><img src="img/002_elements/btn_elements_023.png" /></li>
+                    <li ><img src="img/002_elements/btn_elements_000.png" /></li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="footer inline center">
+            <a onClick="urlopen()" href="#">WWW.3D-MAP-GENERATOR.COM</a>
+        </div>
+               
+        <div class="modal-loading">
+            <div>
+                <img src="img/logo_ani_process.gif" / alt="loading">
+            </div>
+        </div>
+
+    </body>
+</html>

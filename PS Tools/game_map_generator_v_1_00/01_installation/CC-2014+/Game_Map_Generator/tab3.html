@@ -1,0 +1,96 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="de">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Texturing</title>
+        <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery.modal.min.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/doc.js" type="text/javascript"></script>
+        <script src="js/3dmgg_t3.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/CSInterface.js"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/jquery.modal.css" type="text/css">
+    </head>
+    <body>
+        <div class="wrapper">
+        
+            <div class="navigation inline center">
+                <ul>
+                    <li><a href="index.html">MAP</a></li><li>
+                    <a href="tab2.html">ELEMENTS</a></li><li class="active">
+                    <a href="tab3.html">TEXTURING</a></li><li>
+                    <a href="tab4.html">ICONS</a></li>
+                </ul>
+            </div>
+            
+            <div class="tool--wrap border-bot" style="padding: 8px 5px 13px;">
+                <div class="tool--brushes clearfix center">
+                    <span class="label-top">BRUSHES</span><br>
+                    <img onClick="brush('3dmgg_hard_round_pressure_iso', 70)" src="img/001_brushes/btn_brushes_001.png" />
+                    <img onClick="brush('3dmgg_hard_round_iso', 70)"src="img/001_brushes/btn_brushes_002.png" />
+                    <img onClick="brush('3dmgg_soft_edges', 70)"src="img/001_brushes/btn_brushes_003.png" />
+                    <img onClick="brush('3dmgg_hard_edges', 70)"src="img/001_brushes/btn_brushes_004.png" />
+                    <img onClick="brush('3dmgg_round_soft_iso', 100)"src="img/001_brushes/btn_brushes_005.png" />
+                    <img onClick="brush('3dmgg_abstract', 70)"src="img/001_brushes/btn_brushes_006.png" />
+                    <img onClick="brush('3dmgg_grass_border_round', 20)"src="img/001_brushes/btn_brushes_007.png" />
+                </div>
+            </div>
+            
+            <div class="tool--wrap center border-bot rechts" style="padding: 8px 5px 8px;">
+                <span class="headline">CHOOSE A TEXTURE</span>
+                <ul class="tool--textures inline">
+                    <li onClick="texture('texture_1')"><img src="img/007_textures/btn_textures_001.png" /></li>
+                    <li onClick="texture('texture_2')"><img src="img/007_textures/btn_textures_002.png" /></li>
+                    <li onClick="texture('texture_3')"><img src="img/007_textures/btn_textures_003.png" /></li>
+                    <li onClick="texture('texture_4')"><img src="img/007_textures/btn_textures_004.png" /></li>
+                    <li onClick="texture('texture_5')"><img src="img/007_textures/btn_textures_005.png" /></li>
+                    <li onClick="texture('texture_6')"><img src="img/007_textures/btn_textures_006.png" /></li>
+                    <li onClick="texture('texture_7')"><img src="img/007_textures/btn_textures_007.png" /></li>
+                    <li onClick="texture('texture_8')"><img src="img/007_textures/btn_textures_008.png" /></li>
+                    <li onClick="texture('texture_9')"><img src="img/007_textures/btn_textures_009.png" /></li>
+                    <li onClick="texture('texture_10')"><img src="img/007_textures/btn_textures_010.png" /></li>
+                    <li onClick="texture('texture_11')"><img src="img/007_textures/btn_textures_011.png" /></li>
+                    <li onClick="texture('texture_12')"><img src="img/007_textures/btn_textures_012.png" /></li>
+                    <li onClick="texture('texture_13')"><img src="img/007_textures/btn_textures_013.png" /></li>
+                    <li onClick="texture('texture_14')"><img src="img/007_textures/btn_textures_014.png" /></li>
+                    <li onClick="texture('texture_15')"><img src="img/007_textures/btn_textures_015.png" /></li>
+                    <li onClick="texture('texture_16')"><img src="img/007_textures/btn_textures_016.png" /></li>
+                    <li onClick="texture('texture_17')"><img src="img/007_textures/btn_textures_017.png" /></li>
+                    <li onClick="texture('texture_18')"><img src="img/007_textures/btn_textures_018.png" /></li>
+                </ul>
+            </div>
+            
+            <div class="tool--wrap center border-bot" style="padding: 14px 5px 14px">
+                <span class="label-left">SPECIAL<br>BRUSHES</span>
+                <ul class="tool--special-brushes clearfix center inline">
+                    <li onClick="process(spezi1)"><img src="img/009_special_brushes/btn_special_flower.png" /></li>
+                    <li onClick="process(spezi2)"><img src="img/009_special_brushes/btn_special_shoot.png" /></li>
+                    <li onClick="process(spezi3)"><img src="img/009_special_brushes/btn_special_grass.png" /></li>
+                </ul>
+            </div>
+            
+            <div class="tool--wrap center" style="padding: 14px 5px 14px">
+                <span class="label-left">RANDOM<br>TEXTURES</span>
+                <ul class="tool--random-textures clearfix center inline">
+                    <li onClick="process(random1)"><img src="img/004_random/btn_random_01.png" /></li>
+                    <li onClick="process(random2)"><img src="img/004_random/btn_random_02.png" /></li>
+                    <li onClick="process(random3)"><img src="img/004_random/btn_random_03.png" /></li>
+                </ul>
+            </div>
+            
+            
+        </div>
+        
+        <div class="footer inline center">
+            <a onClick="urlopen()" href="#">WWW.3D-MAP-GENERATOR.COM</a>
+        </div>
+
+        <div class="modal-loading">
+            <div>
+                <img src="img/logo_ani_process.gif" / alt="loading">
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="de">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Icons</title>
+        <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script src="js/jquery.modal.min.js" type="text/javascript"></script>
+        <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="js/script.js" type="text/javascript"></script>
+        <script src="js/doc.js" type="text/javascript"></script>
+        <script src="js/tab_3dmap.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/CSInterface.js"></script>
+        <script src="js/mylib.js"></script>
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/jquery.modal.css" type="text/css">
+    </head>
+    <body>
+        <div class="wrapper">
+        
+            <div class="navigation inline center">
+                <ul>
+                    <li><a href="index.html">MAP</a></li><li>
+                    <a href="tab2.html">ELEMENTS</a></li><li>
+                    <a href="tab3.html">TEXTURING</a></li><li class="active">
+                    <a href="tab4.html">ICONS</a></li>
+                </ul>
+            </div>
+            
+<div class="meta-navigation border-bot inline">
+                <ul>
+                    <li class="hover" onClick="ResetIcons()"><img src="img/meta-basic.png" /><span>BASIC ICONS</span></li><li class="hover" onClick="FolderPick()">
+                    <img src="img/meta-select.png" /><span>SELECT FOLDER</span></li>
+                </ul>
+            </div>
+            
+            <div class="icon--wrap">
+                <h2>ICON SIZE</h2>
+                <div class="ui--slider-wrap">
+                    <div class="ui--box">
+                        <div class="ui--slider"></div>
+                    </div>
+                    <span class="ui--result" id="sf2" value="100">100%</span>
+                </div>
+                
+                <div id="myIconLib">
+                <div class="section createyourown">
+                    <div  id="isocons"> </div>
+                    <div id="container" class="icons"></div>
+                </div>
+                </div>
+        </div>
+            
+        </div>
+        
+        <div class="footer inline center">
+            <a onClick="urlopen()" href="#">WWW.3D-MAP-GENERATOR.COM</a>
+        </div>
+                
+        <div class="modal-loading">
+            <div>
+                <img src="img/logo_ani_process.gif" / alt="loading">
+            </div>
+        </div>
+
+    </body>
+</html>
