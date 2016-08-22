@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -75,18 +69,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EnemyHealthBar.cs" />
-    <Compile Include="Assets\EnemyScript.cs" />
-    <Compile Include="Assets\LevelController.cs" />
-    <Compile Include="Assets\MenuController.cs" />
-    <Compile Include="Assets\MissionController.cs" />
-    <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\QuestButtonClass.cs" />
-    <Compile Include="Assets\QuestMapController.cs" />
-    <Compile Include="Assets\Quit.cs" />
-    <Compile Include="Assets\RoationController.cs" />
-    <Compile Include="Assets\TowerControllers.cs" />
-    <Compile Include="Assets\UIController.cs" />
+    <Compile Include="Assets\ProjectileClass.cs" />
+    <Compile Include="Assets\Scripts\EnemyHealthBar.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript.cs" />
+    <Compile Include="Assets\Scripts\LevelController.cs" />
+    <Compile Include="Assets\Scripts\MenuController.cs" />
+    <Compile Include="Assets\Scripts\MissionController.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\QuestButtonClass.cs" />
+    <Compile Include="Assets\Scripts\QuestMapController.cs" />
+    <Compile Include="Assets\Scripts\Quit.cs" />
+    <Compile Include="Assets\Scripts\RoationController.cs" />
+    <Compile Include="Assets\Scripts\SpawnController.cs" />
+    <Compile Include="Assets\Scripts\TowerControllers.cs" />
+    <Compile Include="Assets\Scripts\UIController.cs" />
+    <Compile Include="Assets\TowerClass.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
